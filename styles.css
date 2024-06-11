@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e013b3;
+    overflow: hidden;
+}
+.gif {
+    position: absolute;
+    background-size: cover;
+    width: 150px;  /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    opacity: 0.8;  /* Adjust opacity as needed */
+}
+
+.gif1 {
+    mix-blend-mode: multiply;
+    top: 2%;
+    left: 30%;
+    background-image: url('https://tenor.com/view/bunny-love-hugs-lots-of-love-brown-and-cony-gif-14705494.gif');
+}
+
+.gif2 {
+    mix-blend-mode: multiply;
+    top: 2%;
+    left: 60%;
+    background-image: url('https://tenor.com/view/bunny-love-hugs-lots-of-love-brown-and-cony-gif-14705494.gif');
+    transform: scaleX(-1);
+}
+
+.gif6 {
+    mix-blend-mode: multiply;
+    top: 95%;
+    left: 15%;
+    background-image: url('https://tenor.com/view/wrapped-gifts-birthday-presents-blossom-flowers-hibiscus-gif-7561922659784932011.gif');
+
+}
+
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.envelope {
+    width: 200px;
+    height: 120px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.envelope .top, .envelope .bottom {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #ea23b5;
+    border: 2px solid #d4a373;
+    border-radius: 30px;
+}
+
+.envelope .top {
+    top: 0;
+    border-bottom: none;
+    background-color: #b40c0c;
+    transform-origin: bottom;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 30px;
+}
+
+.envelope .bottom {
+    bottom: 0;
+}
+
+.letter {
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ea0707;
+    border: 2px solid #0d0c0c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.letter h1 {
+    margin-top: 0;
+}
+
+/* Background with multiple GIFs */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://tenor.com/view/sending-love-gif-25755600.gif') repeat;
+    background-size: contain;
+    opacity: .3;
+    z-index: 0;
+}
+
+.texts {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: fixed;
+    top: 5%;
+    left: 30%
+}
